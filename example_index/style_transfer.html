@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Style Transfer Through Back-Translation</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/scrolling-nav.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <!-- Name on the side in the nav bar -->
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Shrimai Prabhumoye</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">  
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#method">Overview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#gender">Gender</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#political">Political</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#sentiment">Sentiment</a>
+              </li>        
+            </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--
+  <header class="bg-primary text-black">
+    <div class="container text-center">
+      <h1>Welcome to Scrolling Nav</h1>
+      <p class="lead">A landing page template freshly redesigned for Bootstrap 4</p>
+    </div>
+  </header>
+  -->
+
+  <section id="method">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>Style Transfer Through Back-Translation</h2>
+            <div class="column" style="width: 100%; float: left;">
+              <figure>
+                <img class="img-fluid" style="padding-right: 10%; padding-top: 0%;" src="../figs/overview-style-transfer.png" alt="">
+                <figcaption style="text-align: center;"><b>Style transfer pipeline:</b> to rephrase a sentence and reduce its stylistic characteristics, the sentence is back-translated. Then, separate style-specific generators are used for style transfer.</figcaption>
+            </figure>
+            <p>Style transfer is the task of rephrasing the text to contain specific stylistic properties without changing the intent or affect within the context. This paper introduces a new method for automatic style transfer. We first learn a latent representation of the input sentence which is grounded in a language translation model in order to better preserve the meaning of the sentence while reducing stylistic properties. Then adversarial generation techniques are used to make the output match the desired style. We evaluate this technique on three different style transformations: sentiment, gender and political slant. Compared to two state-of-the-art style transfer modeling techniques we show improvements both in automatic evaluation of style transfer and in manual evaluation of meaning preservation and fluency.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gender" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>Gender Task</h2>
+          <table style="width:100%">
+            <tr>
+              <th style="width: 12%; padding-bottom: 0.5em;">Tag</td>
+              <th style="width: 12%; padding-bottom: 0.5em;">Gender</td> 
+              <th style="width: 76%; padding-bottom: 0.5em;">sentence</td>
+            </tr>
+
+            <tr>
+              <td>Original</td>
+              <td>Male</td> 
+              <td>My wife ordered country fried steak and eggs.</td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 1em;">Generated</td>
+              <td style="padding-bottom: 1em;">Female</td> 
+              <td style="padding-bottom: 1em;">My husband ordered the chicken salad and the fries.</td>
+            </tr>
+            
+            <tr>
+              <td>Original</td>
+              <td>Male</td> 
+              <td>the place is small but cosy and clean.</td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 1em;">Generated</td>
+              <td style="padding-bottom: 1em;">Female</td> 
+              <td style="padding-bottom: 1em;">the place is great but very clean and friendly.</td>
+            </tr>
+
+            <tr>
+              <td>Original</td>
+              <td>Female</td> 
+              <td>Save yourselves the huge headaches.</td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 1em;">Generated</td>
+              <td style="padding-bottom: 1em;">Male</td> 
+              <td style="padding-bottom: 1em;">You are going to be disappointed.</td>
+            </tr>
+
+            <tr>
+              <td>Original</td>
+              <td>Female</td> 
+              <td>Would I discourage someone else from going?</td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 1em;">Generated</td>
+              <td style="padding-bottom: 1em;">Male</td> 
+              <td style="padding-bottom: 1em;">I wouldn't go back!</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="political">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>Political Slant</h2>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sentiment" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>Sentiment Modification</h2>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>

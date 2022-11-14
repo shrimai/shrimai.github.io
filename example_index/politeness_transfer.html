@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Politeness Transfer: A Tag and Generate Approach</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/scrolling-nav.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <!-- Name on the side in the nav bar -->
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Shrimai Prabhumoye</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">  
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#method">Overview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#gender">Politeness</a>
+              </li>       
+            </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <section id="method">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>Politeness Transfer: A Tag and Generate Approach</h2>
+            <div class="column" style="width: 100%; float: left;">
+              <figure>
+                <img class="img-fluid" style="padding-right: 10%; padding-top: 0%;padding-bottom: 2%;" src="../figs/overview-politeness.png" alt="">
+                <figcaption style="text-align: center;"><b>Tag and Generate Approach:</b>The tagger infers the interpretable style free sentence z(x<sub>i</sub>).</figcaption>
+            </figure>
+            <p>This paper introduces a new task of politeness transfer which involves converting non-polite sentences to polite sentences while preserving the meaning. We also provide a dataset of more than 1.39 instances automatically labeled for politeness to encourage benchmark evaluations on this new task. We design a tag and generate pipeline that identifies stylistic attributes and subsequently generates a sentence in the target style while preserving most of the source content. For politeness as well as five other transfer tasks, our model outperforms the state-of-the-art methods on automatic metrics for content preservation, with a comparable or better performance on style transfer accuracy. Additionally, our model surpasses existing methods on human evaluations for grammaticality, meaning preservation and transfer accuracy across all the six style transfer tasks. The data and code is located at <a onclick="window.open(this.href); return false;" title="https://github.com/tag-and-generate" href="https://github.com/tag-and-generate" onkeypress="window.open(this.href); return false;" target="_blank"><span style="color: dodgerblue;">https://github.com/tag-and-generate</span></a>.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gender" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>Politeness task</h2>
+          <table style="width:100%">
+            <tr>
+              <th style="width: 20%;">Input:</td>
+              <td style="width: 80%;">What happened to my personal station?</td> 
+            </tr>
+            <tr>
+              <th>Output:</td>
+              <td><span style="color: blue;">Could you please let me know </span>what happened to my personal station?</td>
+            </tr>
+            <tr>
+              <th style="padding-bottom: 1em;">Politeness Strategy:</td>
+              <td style="padding-bottom: 1em;"><i>could</i> and <i>would</i> are <span style="color: darkgreen;">counterfactual</span> forms which are polite.</td>
+            </tr>
+
+            <tr>
+              <th style="width: 20%;">Input:</td>
+              <td style="width: 80%;">Yes, go ahead and remove it.</td> 
+            </tr>
+            <tr>
+              <th>Output:</td>
+              <td>Yes, <span style="color: blue;"></span>we can </span>go ahead and remove it.</td>
+            </tr>
+            <tr>
+              <th style="padding-bottom: 1em;" valign="top">Politeness Strategy:</td>
+              <td style="padding-bottom: 1em;"><span style="color: darkgreen;">1st person plural </span>form creates a sense that the burden of the request is <i>shared</i> by speaker and addressee.</td>
+            </tr>
+
+            <tr>
+              <th style="width: 20%;">Input:</td>
+              <td style="width: 80%;">Not yet-i’ll try this weekend.</td> 
+            </tr>
+            <tr>
+              <th>Output:</td>
+              <td><span style="color: blue;">Sorry,</span> not yet-i’ll try <span style="color: blue;">to make sure</span> this week.</td>
+            </tr>
+            <tr>
+              <th style="padding-bottom: 1em;">Politeness Strategy:</td>
+              <td style="padding-bottom: 1em;"><span style="color: darkgreen;">Apologizing</span> deflects the social threat of the request by attuning to the imposition itself.</td>
+            </tr>
+
+            <tr>
+              <th style="width: 20%;">Input:</td>
+              <td style="width: 80%;">Please check on metromedia energy.</td> 
+            </tr>
+            <tr>
+              <th>Output:</td>
+              <td>Please check on metromedia energy<span style="color: blue;">, thanks.</span></td>
+            </tr>
+            <tr>
+              <th style="padding-bottom: 1em;">Politeness Strategy:</td>
+              <td style="padding-bottom: 1em;"><span style="color: darkgreen;">Mitigating please start.</span></td>
+            </tr>
+            
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
